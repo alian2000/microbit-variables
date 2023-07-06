@@ -14,7 +14,7 @@ basic.forever(function () {
             SoundExpressionEffect.None,
             InterpolationCurve.Linear
             ), music.PlaybackMode.UntilDone)
-            basic.showIcon(IconNames.Heart)
+            basic.showIcon(IconNames.Snake)
             basic.pause(5000)
         }
     }

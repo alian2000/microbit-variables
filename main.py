@@ -6,12 +6,22 @@ def on_forever():
         x += 1
         basic.show_number(x)
         if x == 5:
+            music.play(music.create_sound_expression(WaveShape.SINE,
+                    5000,
+                    0,
+                    255,
+                    0,
+                    5000,
+                    SoundExpressionEffect.NONE,
+                    InterpolationCurve.LINEAR),
+                music.PlaybackMode.UNTIL_DONE)
             basic.show_icon(IconNames.HEART)
             basic.pause(5000)
-            basic.show_string("bingo i am 5")
     if input.button_is_pressed(Button.B):
         x += -1
         basic.show_number(x)
         if x == -5:
+            music.play(music.string_playable("E D G F B A C5 B ", 500),
+                music.PlaybackMode.UNTIL_DONE)
             basic.show_string("No i am freezing")
 basic.forever(on_forever)
